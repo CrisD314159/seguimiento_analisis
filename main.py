@@ -1,11 +1,11 @@
 """
   Main module of the project
 """
-from scrappers.ScopusScrapper import ScopusScraper
-from utils.utils import Utils
-from scrappers.sage_scrapper import SageScraper
+# from scrappers.ScopusScrapper import ScopusScraper
+# from utils.utils import Utils
+# from scrappers.sage_scrapper import SageScraper
 from reader_resources.reader_implementation import ReaderImplementation
-from scrappers.iee_scrapper import IeeeScrapper
+# from scrappers.iee_scrapper import IeeeScrapper
 
 
 # utils = Utils()

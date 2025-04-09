@@ -19,6 +19,8 @@ from sorting_algorithms.bubble_sort import StringBubbleSort
 from reader_resources.execution_time_plotter import ExecutionTimePlotter
 from sorting_algorithms.bidirectional_bubble_sort import BidirectionalStringSort
 from sorting_algorithms.shell_sort import ShellSort
+from sorting_algorithms.merge_sort import MergeSort
+from sorting_algorithms.radix_nodes import RadixSortNodes
 
 
 class AlgorithmsExecution:
@@ -245,6 +247,37 @@ class AlgorithmsExecution:
             return -1
 
     @staticmethod
+    def run_merge_sort(arr):
+        """
+        Run method for Bubble sort
+        """
+        try:
+
+            arr_copy = arr[:]
+            merge = MergeSort()
+            merge.sort(arr_copy)
+            return "Merge"
+        except IndexError:
+            print("Error executing the Tree Sort algorithm (Index out of range)")
+            return -1
+
+    @staticmethod
+    def run_radix_nodes(arr):
+        """
+        Run method for Bubble sort
+        """
+        try:
+
+            arr_copy = arr[:]
+
+            radix = RadixSortNodes()
+            radix.sort(a=arr_copy)
+            return "Radix Node"
+        except IndexError:
+            print("Error executing the Tree Sort algorithm (Index out of range)")
+            return -1
+
+    @staticmethod
     def execute_algorithms(arr, plotter_name):
         """
         Execute all sorting algorithms.
@@ -266,7 +299,9 @@ class AlgorithmsExecution:
             AlgorithmsExecution.run_bubble,
             AlgorithmsExecution.run_tree,
             AlgorithmsExecution.run_bubble_bidirectional,
-            AlgorithmsExecution.run_shell_sort
+            AlgorithmsExecution.run_shell_sort,
+            AlgorithmsExecution.run_merge_sort,
+            AlgorithmsExecution.run_radix_nodes
         ]
 
         times = []  # list to store the execution times
